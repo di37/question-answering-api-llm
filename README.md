@@ -2,7 +2,7 @@
 
 ## Motivation
 
-After release of ChatGPT, a lot of people have asked why not we get specific bots for specific area of interest. In this project, we will be building an API that will answer questions about Harry Potter related questions from Harry Potter books.
+After release of ChatGPT, a lot of people have asked why not we get specific question answer systems/bots for specific area of interest. In this project, we will be building an API that will answer questions about Harry Potter related questions from Harry Potter books.
 
 ## Brief Introduction about LangChain and GPT Index
 
