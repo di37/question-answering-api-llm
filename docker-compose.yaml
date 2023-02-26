@@ -1,0 +1,8 @@
+services:
+  pythonapp:
+    build: ./
+    image: harry_potter_question_ans_bot
+    ports:
+      - "9001:3000"
+    volumes:
+      - "./items:/app/items"

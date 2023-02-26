@@ -1,0 +1,5 @@
+**/*__pycache__
+**/*.vscode
+items/raw_data
+**/*.ipynb
+**/*.json
