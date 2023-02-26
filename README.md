@@ -10,20 +10,32 @@ Use of large language models (LLMs) is becoming increasingly prevalent in the de
 
 **GPT Index (LlamaIndex 🦙)**, is a collection of data structures that simplify the usage of large external knowledge sources with large language models.
 
-These two libraries will enable us to build question and answering model by accessing LLM and fine-tune it for our purpose. 
+These two libraries will enable us to build question and answering model by accessing LLM and fine-tune it for our purpose.
 
-## Setup before Running the Docker Container
-- `.env` must contain the OPENAPI KEY and paths. Sample included. For production purpose, .env file should be included in .gitignore file. 
+## Running the API on Docker Container
+
+- Sign up in OpenAI website and get your API key.
+- `.env` must contain the OPENAPI KEY and paths. Sample included. For production purpose, .env file should be included in .gitignore file.
 - Run the docker container:
+
 ```bash
 docker compose up
 ```
-- If any changes made to the code, then run following command for the code changes to be reflected in the docker container.Then, we can run the above command. 
+
+- If any changes made to the code, then run following command for the code changes to be reflected in the docker container.Then, we can run the above command.
+
 ```bash
-docker compose build 
+docker compose build
 ```
+
 - On your web browser, go to `http://localhost:9001/docs` and you will see the documentation.
-- Ensure the items folder have structure like this:
+  ![alt text](https://github.com/di37/question-answering-api-llm/blob/main/items/screenshots/FastAPI_Docs.png?raw=true)
+- Make POST request for generating index file.
+  ![alt text](https://github.com/di37/question-answering-api-llm/blob/main/items/screenshots/Generating_Index_File.png?raw=true)
+- If index file is generated, then we will get following response.
+  ![alt text](https://github.com/di37/question-answering-api-llm/blob/main/items/screenshots/Success_Message_For_Generation.png?raw=true)
+- Ensure the items directory is having following tree structure:
+
 ```bash
 items
 ├── data
@@ -32,3 +44,16 @@ items
     └── index.json
 ```
 
+- Now we are ready to ask questions to the system for which also, we need to make POST request. Sample as follows.
+  ![alt text](https://github.com/di37/question-answering-api-llm/blob/main/items/screenshots/answer_sample_1.png?raw=true)
+
+## Resources
+
+- LangChain Library: https://github.com/hwchase17/langchain
+- GPT-Index Library: https://github.com/jerryjliu/gpt_index
+- Video Tutorial: https://www.youtube.com/watch?v=Dhc_fq5iCnU&t=106s&ab_channel=1littlecoder
+- Harry Potter - Books 1 - 7. By J.K Rowling.
+
+## Important Note
+
+This project is created exclusively for educational purpose. Data is strictly not to be used for commercial purposes.
